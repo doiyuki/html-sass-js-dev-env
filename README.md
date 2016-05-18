@@ -11,9 +11,9 @@ $ npm install
 $ gulp  
 
 (Optional)  
-$mkdir src  
-$mkdir ./src/js  
-$mkdir ./src/sass  
+$ mkdir src  
+$ mkdir ./src/js  
+$ mkdir ./src/sass  
 
 # Usage
 Write JavaScript in src/js, and SASS in src/sass.  
