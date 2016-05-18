@@ -11,7 +11,7 @@ $ npm install
 $ gulp  
 
 (Optional)  
-$mkdir ./src/js
+$mkdir ./src/js  
 $mkdir ./src/sass  
 
 # Usage
