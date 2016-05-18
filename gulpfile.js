@@ -21,7 +21,7 @@ var sass = require("gulp-sass");
 var autoprefixer = require("gulp-autoprefixer");
 
 gulp.task("sass", function() {
-    gulp.src("src/sass/**/*scss")
+    gulp.src("src/sass/**/*.scss")
         .pipe(plumber())
         .pipe(sass())
         .pipe(autoprefixer())
@@ -35,7 +35,7 @@ gulp.task("sass", function() {
 var uglify = require("gulp-uglify");
 
 gulp.task("js", function() {
-    gulp.src(["dst/js/**/*.js", "!dst/js/min/**/*.js"])
+    gulp.src("src/js/**/*.js")
         .pipe(plumber())
         .pipe(uglify())
         .pipe(gulp.dest("./dst/js/min"))
@@ -46,6 +46,6 @@ gulp.task("js", function() {
 // default
 // ------------
 gulp.task("default", ["server"], function() {
-    gulp.watch(["dst/js/**/*.js", "!dst/js/min/**/*.js"], ["js"]);
+    gulp.watch(["src/js/**/*.js", "!dst/js/min/**/*.js"], ["js"]);
     gulp.watch("src/sass/**/*.scss", ["sass"]);
 })
