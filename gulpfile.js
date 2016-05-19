@@ -45,7 +45,7 @@ gulp.task("js", function() {
 // ------------
 // default
 // ------------
-gulp.task("default", ["server"], function() {
+gulp.task("default", ["server", "js", "sass"], function() {
     gulp.watch(["src/js/**/*.js", "!dst/js/min/**/*.js"], ["js"]);
     gulp.watch("src/sass/**/*.scss", ["sass"]);
 })
